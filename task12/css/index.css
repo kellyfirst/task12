@@ -1,0 +1,103 @@
+*{
+    padding:0;
+    margin:0;
+}
+.container{
+    min-width: 640px;
+    height: 640px;
+    margin: 10px;
+    -webkit-display:flex;
+    display:flex;
+    -webkit-flex-direction:column;
+    flex-direction:column;
+  justify-content:space-around;
+    -webkit-align-items:center;
+    align-items:center;
+}
+.container>table{
+    width: 400px;
+    border-collapse:collapse;
+    text-align:center;
+}
+.container>table>thead{
+    background-color: #000;
+    color:#fff;
+}
+.container>table>tbody>tr:nth-child(odd){
+    background-color:#FCFAFD;
+}
+.container>table>tbody>tr>td{
+    color:#000;
+}
+.container>table>tbody>tr:nth-child(1),
+.container>table>tbody>tr:nth-child(2),
+.container>table>tbody>tr:nth-child(3){
+    color:red;
+}
+.container>table>tbody>tr:nth-child(even){
+    background-color: #CCCDC8;
+}
+input{
+    width: 250px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    box-shadow:10px 10px 5px #888;
+}
+.box {
+    width: 450px;
+    height: 250px;
+    background-color: red;
+    border-radius: 25px;
+    box-shadow: 10px 10px 5px #999;
+    animation: myfirst 5s;
+    -moz-animation: myfirst 5s; /*firefox*/
+    -webkit-animation: myfirst 5s; /*safari and chrome*/
+    -o-animation: myfirst 5s; /*opera*/
+    trabsition:width 2s;
+    -moz-transition:width 2s;
+    -webkit-transition:width 2s;
+    -o-transition:width 2s;
+}
+.box:hover{
+    width: 500px;
+    background-color: #A5D5EE;
+}
+@keyframes myfirst
+    {
+        0% { background:red;}
+        25% {bgckground:yellow;}
+        50% {background:blue;}
+        100% { background:green;}
+    }
+@-moz-keyframes myfirst /*firefox*/
+    {
+        0% { background:red;}
+        25% {bgckground:yellow;}
+        50% {background:blue;}
+        100% { background:green;}
+    }
+@-webkit-keyframes myfirst  /*safari and chrome*/
+    {
+        0% { background:red;}
+        25% {bgckground:yellow;}
+        50% {background:blue;}
+        100% { background:green;}
+    }
+@-o-keyframes myfirst /*opera*/
+        {
+    0% { background:red;}
+    25% {bgckground:yellow;}
+    50% {background:blue;}
+    100% { background:green;}
+    }
+input{
+    transition:width 2s;
+    -moz-transition:width 2s;
+    -webkit-transition:width 2s;
+    -o-transition:width 2s;
+}
+input:hover{
+    width: 300px;
+    border-color:#A5D5EE;
+}
